@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{73600CD8-CD3E-4B54-BF46-E8F0A85ACD95}|PA_SistemaCursosAcad\\Datos.csproj|C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\pa_sistemacursosacad\\datosexcepciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73600CD8-CD3E-4B54-BF46-E8F0A85ACD95}|PA_SistemaCursosAcad\\Datos.csproj|solutionrelative:pa_sistemacursosacad\\datosexcepciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73600CD8-CD3E-4B54-BF46-E8F0A85ACD95}|PA_SistemaCursosAcad\\Datos.csproj|C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\pa_sistemacursosacad\\dbcurso.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{73600CD8-CD3E-4B54-BF46-E8F0A85ACD95}|PA_SistemaCursosAcad\\Datos.csproj|solutionrelative:pa_sistemacursosacad\\dbcurso.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD42761B-9260-4ABE-B537-36B509D8CCEA}|Presentaciones\\Presentaciones.csproj|C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\presentaciones\\inscripciones\\editinscripcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FD42761B-9260-4ABE-B537-36B509D8CCEA}|Presentaciones\\Presentaciones.csproj|solutionrelative:presentaciones\\inscripciones\\editinscripcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA75CAD6-C359-42A0-A7E0-B61B76AF118A}|Entidades\\Entidades.csproj|C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\entidades\\clasespersonalizadas\\alumnopersonalizado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA75CAD6-C359-42A0-A7E0-B61B76AF118A}|Entidades\\Entidades.csproj|solutionrelative:entidades\\clasespersonalizadas\\alumnopersonalizado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA75CAD6-C359-42A0-A7E0-B61B76AF118A}|Entidades\\Entidades.csproj|C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\entidades\\clasespersonalizadas\\cursopersonalizado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA75CAD6-C359-42A0-A7E0-B61B76AF118A}|Entidades\\Entidades.csproj|solutionrelative:entidades\\clasespersonalizadas\\cursopersonalizado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD42761B-9260-4ABE-B537-36B509D8CCEA}|Presentaciones\\Presentaciones.csproj|C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\presentaciones\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD42761B-9260-4ABE-B537-36B509D8CCEA}|Presentaciones\\Presentaciones.csproj|solutionrelative:presentaciones\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD42761B-9260-4ABE-B537-36B509D8CCEA}|Presentaciones\\Presentaciones.csproj|C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\presentaciones\\frmmenu_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD42761B-9260-4ABE-B537-36B509D8CCEA}|Presentaciones\\Presentaciones.csproj|solutionrelative:presentaciones\\frmmenu_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 187,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatosExcepciones.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\PA_SistemaCursosAcad\\DatosExcepciones.cs",
+              "RelativeDocumentMoniker": "PA_SistemaCursosAcad\\DatosExcepciones.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\PA_SistemaCursosAcad\\DatosExcepciones.cs",
+              "RelativeToolTip": "PA_SistemaCursosAcad\\DatosExcepciones.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T20:14:06.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBCurso.dbml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\PA_SistemaCursosAcad\\DBCurso.dbml",
+              "RelativeDocumentMoniker": "PA_SistemaCursosAcad\\DBCurso.dbml",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\PA_SistemaCursosAcad\\DBCurso.dbml",
+              "RelativeToolTip": "PA_SistemaCursosAcad\\DBCurso.dbml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
+              "WhenOpened": "2025-07-07T20:24:15.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "editInscripcion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\Presentaciones\\Inscripciones\\editInscripcion.cs",
+              "RelativeDocumentMoniker": "Presentaciones\\Inscripciones\\editInscripcion.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\Presentaciones\\Inscripciones\\editInscripcion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentaciones\\Inscripciones\\editInscripcion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T19:46:26.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CursoPersonalizado.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\Entidades\\ClasesPersonalizadas\\CursoPersonalizado.cs",
+              "RelativeDocumentMoniker": "Entidades\\ClasesPersonalizadas\\CursoPersonalizado.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\Entidades\\ClasesPersonalizadas\\CursoPersonalizado.cs",
+              "RelativeToolTip": "Entidades\\ClasesPersonalizadas\\CursoPersonalizado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T19:46:06.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AlumnoPersonalizado.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\Entidades\\ClasesPersonalizadas\\AlumnoPersonalizado.cs",
+              "RelativeDocumentMoniker": "Entidades\\ClasesPersonalizadas\\AlumnoPersonalizado.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\Entidades\\ClasesPersonalizadas\\AlumnoPersonalizado.cs",
+              "RelativeToolTip": "Entidades\\ClasesPersonalizadas\\AlumnoPersonalizado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T19:45:54.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\Presentaciones\\Program.cs",
+              "RelativeDocumentMoniker": "Presentaciones\\Program.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\Presentaciones\\Program.cs",
+              "RelativeToolTip": "Presentaciones\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T00:08:22.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmMENU_2.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\Presentaciones\\frmMENU_2.cs",
+              "RelativeDocumentMoniker": "Presentaciones\\frmMENU_2.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\PROGRAMAS 4A\\PA_SistemaCursosAcad\\Presentaciones\\frmMENU_2.cs",
+              "RelativeToolTip": "Presentaciones\\frmMENU_2.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAADcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T19:29:50.597Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

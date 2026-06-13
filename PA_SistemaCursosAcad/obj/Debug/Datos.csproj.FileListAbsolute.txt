@@ -1,0 +1,10 @@
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\PA_SistemaCursosAcad\bin\Debug\PA_SistemaCursosAcad.dll.config
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\PA_SistemaCursosAcad\bin\Debug\PA_SistemaCursosAcad.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\PA_SistemaCursosAcad\bin\Debug\PA_SistemaCursosAcad.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\PA_SistemaCursosAcad\bin\Debug\Entidades.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\PA_SistemaCursosAcad\bin\Debug\Entidades.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\PA_SistemaCursosAcad\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\PA_SistemaCursosAcad\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\PA_SistemaCursosAcad\obj\Debug\PA_SistemaCursosAcad.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\PA_SistemaCursosAcad\obj\Debug\PA_SistemaCursosAcad.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\PA_SistemaCursosAcad\obj\Debug\Datos.csproj.CopyComplete

@@ -1,0 +1,6 @@
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Entidades\bin\Debug\Entidades.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Entidades\bin\Debug\Entidades.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Entidades\obj\Debug\Entidades.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Entidades\obj\Debug\Entidades.pdb

@@ -1,0 +1,14 @@
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\bin\Debug\Logica.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\bin\Debug\Logica.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\bin\Debug\Entidades.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\bin\Debug\PA_SistemaCursosAcad.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\bin\Debug\Entidades.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\bin\Debug\PA_SistemaCursosAcad.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\bin\Debug\PA_SistemaCursosAcad.dll.config
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\obj\Debug\Logica.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\obj\Debug\Logica.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\obj\Debug\Logica.Properties.Resources.resources
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\obj\Debug\Logica.csproj.GenerateResource.cache
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Logica\obj\Debug\Logica.csproj.CopyComplete

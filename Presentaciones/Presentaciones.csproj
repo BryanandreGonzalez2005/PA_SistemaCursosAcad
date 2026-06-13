@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD42761B-9260-4ABE-B537-36B509D8CCEA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Presentaciones</RootNamespace>
+    <AssemblyName>Presentaciones</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formacion\adminEspecialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formacion\adminEspecialidades.Designer.cs">
+      <DependentUpon>adminEspecialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formacion\adminModuloCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formacion\adminModuloCurso.Designer.cs">
+      <DependentUpon>adminModuloCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formacion\editEspecialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formacion\editEspecialidades.Designer.cs">
+      <DependentUpon>editEspecialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formacion\editModuloCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formacion\editModuloCurso.Designer.cs">
+      <DependentUpon>editModuloCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMENU_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMENU_2.Designer.cs">
+      <DependentUpon>frmMENU_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripciones\adminAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripciones\adminAlumno.Designer.cs">
+      <DependentUpon>adminAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripciones\adminCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripciones\adminCurso.Designer.cs">
+      <DependentUpon>adminCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripciones\adminInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripciones\adminInscripcion.Designer.cs">
+      <DependentUpon>adminInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripciones\AsignarInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripciones\AsignarInscripcion.Designer.cs">
+      <DependentUpon>AsignarInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripciones\editAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripciones\editAlumno.Designer.cs">
+      <DependentUpon>editAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripciones\editCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripciones\editCurso.Designer.cs">
+      <DependentUpon>editCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripciones\editInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripciones\editInscripcion.Designer.cs">
+      <DependentUpon>editInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripciones\frmInscripcionCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripciones\frmInscripcionCurso.Designer.cs">
+      <DependentUpon>frmInscripcionCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripciones\frmRegistrarNotaFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripciones\frmRegistrarNotaFinal.Designer.cs">
+      <DependentUpon>frmRegistrarNotaFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loggin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loggin.Designer.cs">
+      <DependentUpon>Loggin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\adminAulaVirtual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\adminAulaVirtual.Designer.cs">
+      <DependentUpon>adminAulaVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\adminDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\adminDocente.Designer.cs">
+      <DependentUpon>adminDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\adminRecursoDidactico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\adminRecursoDidactico.Designer.cs">
+      <DependentUpon>adminRecursoDidactico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\editAulaVirtual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\editAulaVirtual.Designer.cs">
+      <DependentUpon>editAulaVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\editDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\editDocente.Designer.cs">
+      <DependentUpon>editDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\editRecursoDidactico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\editRecursoDidactico.Designer.cs">
+      <DependentUpon>editRecursoDidactico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrarse.Designer.cs">
+      <DependentUpon>Registrarse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ubicaciones\adminCiudades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ubicaciones\adminCiudades.Designer.cs">
+      <DependentUpon>adminCiudades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ubicaciones\adminPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ubicaciones\adminPais.Designer.cs">
+      <DependentUpon>adminPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ubicaciones\edirPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ubicaciones\edirPais.Designer.cs">
+      <DependentUpon>edirPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ubicaciones\editCiudad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ubicaciones\editCiudad.Designer.cs">
+      <DependentUpon>editCiudad.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formacion\adminEspecialidades.resx">
+      <DependentUpon>adminEspecialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formacion\adminModuloCurso.resx">
+      <DependentUpon>adminModuloCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formacion\editEspecialidades.resx">
+      <DependentUpon>editEspecialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formacion\editModuloCurso.resx">
+      <DependentUpon>editModuloCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMENU_2.resx">
+      <DependentUpon>frmMENU_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripciones\adminAlumno.resx">
+      <DependentUpon>adminAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripciones\adminCurso.resx">
+      <DependentUpon>adminCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripciones\adminInscripcion.resx">
+      <DependentUpon>adminInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripciones\AsignarInscripcion.resx">
+      <DependentUpon>AsignarInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripciones\editAlumno.resx">
+      <DependentUpon>editAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripciones\editCurso.resx">
+      <DependentUpon>editCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripciones\editInscripcion.resx">
+      <DependentUpon>editInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripciones\frmInscripcionCurso.resx">
+      <DependentUpon>frmInscripcionCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripciones\frmRegistrarNotaFinal.resx">
+      <DependentUpon>frmRegistrarNotaFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loggin.resx">
+      <DependentUpon>Loggin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Recursos\adminAulaVirtual.resx">
+      <DependentUpon>adminAulaVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\adminDocente.resx">
+      <DependentUpon>adminDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\adminRecursoDidactico.resx">
+      <DependentUpon>adminRecursoDidactico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\editAulaVirtual.resx">
+      <DependentUpon>editAulaVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\editDocente.resx">
+      <DependentUpon>editDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\editRecursoDidactico.resx">
+      <DependentUpon>editRecursoDidactico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrarse.resx">
+      <DependentUpon>Registrarse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubicaciones\adminCiudades.resx">
+      <DependentUpon>adminCiudades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubicaciones\adminPais.resx">
+      <DependentUpon>adminPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubicaciones\edirPais.resx">
+      <DependentUpon>edirPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubicaciones\editCiudad.resx">
+      <DependentUpon>editCiudad.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{fa75cad6-c359-42a0-a7e0-b61b76af118a}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{f53d0492-a0cd-4a8e-bcb4-69ec39bcde95}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PA_SistemaCursosAcad\Datos.csproj">
+      <Project>{73600cd8-cd3e-4b54-bf46-e8f0a85acd95}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 20.25, 17.125" name="DBCurso">
+  <DataContextMoniker Name="/DBCursoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3146e595-5656-4d93-8745-2043a2971340" absoluteBounds="6.25, 1.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBCursoDataContext/Alumno" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44fe14bf-bd13-4938-a636-89585c419553" absoluteBounds="6.265, 1.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1fdf349-776f-4f14-974b-162a7bf61e27" absoluteBounds="3.5, 9.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DBCursoDataContext/AulasVital" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b0e6f73-e134-4055-a9d7-2a72fe4c1184" absoluteBounds="3.515, 10.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27342b1b-510a-43ae-ad48-167fe5f601ed" absoluteBounds="3.5, 1.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBCursoDataContext/Ciudad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="137d1c58-1504-4c00-b2bc-565ae3a43902" absoluteBounds="3.515, 2.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e2add2cd-172c-4a92-94c9-06fe7ccf7238" absoluteBounds="6.25, 7.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DBCursoDataContext/Curso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07eb26f0-fe5e-417d-be44-c0ab70cb48ad" absoluteBounds="6.265, 7.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17d1f06e-6b7f-4e12-85e3-17b618c99672" absoluteBounds="3.5, 4.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DBCursoDataContext/Especialidad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1af461ec-70ba-4445-a23b-aad1b3447516" absoluteBounds="3.515, 4.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="431b065f-b418-433d-989d-d69a27480bd1" absoluteBounds="9, 1.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBCursoDataContext/Inscripcion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a95c0f16-509d-4413-9e77-4cd58d6fbc12" absoluteBounds="9.015, 1.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d02fc86b-9492-41c0-be0a-e64123899d45" absoluteBounds="11.75, 4.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBCursoDataContext/Inscripcion_Curso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8aa084a3-2653-45af-8e94-349d276a4a83" absoluteBounds="11.765, 4.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fbccad62-3bc6-45ba-a57c-946ca26606d5" absoluteBounds="3.5, 7, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBCursoDataContext/ModuloCurso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7dde805d-59af-462e-9975-f9475b6c4c01" absoluteBounds="3.515, 7.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4833ffd-9ac7-4c4c-ae55-2eb7b02be35e" absoluteBounds="0.75, 6.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DBCursoDataContext/Paises" />
+      <nestedChildShapes>
+        <elementListCompartment Id="56e9b291-f468-4131-8200-8d749ba62c5b" absoluteBounds="0.765, 6.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07d3129d-2f25-443b-94a8-87e378f374d7" absoluteBounds="0.75, 14.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBCursoDataContext/Proveedor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="438d6f74-7e5e-4b9d-8563-b4893c66413d" absoluteBounds="0.765, 14.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="86cd75f6-460a-49c7-8474-886e87b51174" absoluteBounds="3.5, 14.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBCursoDataContext/RecursoDidactico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="414840d8-b52e-46d7-9127-61772f9d5667" absoluteBounds="3.515, 15.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.41429768880208); (6.25 : 2.41429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/Ciudad/Ciudad_Alumno" />
+      <nodes>
+        <classShapeMoniker Id="27342b1b-510a-43ae-ad48-167fe5f601ed" />
+        <classShapeMoniker Id="3146e595-5656-4d93-8745-2043a2971340" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.28125); (6.28125 : 10.28125); (6.28125 : 9.85740397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/AulasVital/AulasVital_Curso" />
+      <nodes>
+        <classShapeMoniker Id="b1fdf349-776f-4f14-974b-162a7bf61e27" />
+        <classShapeMoniker Id="e2add2cd-172c-4a92-94c9-06fe7ccf7238" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.23159912109375); (7.25 : 5.23159912109375); (7.25 : 7.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/Especialidad/Especialidad_Curso" />
+      <nodes>
+        <classShapeMoniker Id="17d1f06e-6b7f-4e12-85e3-17b618c99672" />
+        <classShapeMoniker Id="e2add2cd-172c-4a92-94c9-06fe7ccf7238" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.45274983723958); (9 : 2.45274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/Alumno/Alumno_Inscripcion" />
+      <nodes>
+        <classShapeMoniker Id="3146e595-5656-4d93-8745-2043a2971340" />
+        <classShapeMoniker Id="431b065f-b418-433d-989d-d69a27480bd1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 7.40625); (12.03125 : 7.40625); (12.03125 : 6.65549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/Curso/Curso_Inscripcion_Curso" />
+      <nodes>
+        <classShapeMoniker Id="e2add2cd-172c-4a92-94c9-06fe7ccf7238" />
+        <classShapeMoniker Id="d02fc86b-9492-41c0-be0a-e64123899d45" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.71875 : 3.53049967447917); (10.71875 : 6.48964680989583); (11.75 : 6.48964680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/Inscripcion/Inscripcion_Inscripcion_Curso" />
+      <nodes>
+        <classShapeMoniker Id="431b065f-b418-433d-989d-d69a27480bd1" />
+        <classShapeMoniker Id="d02fc86b-9492-41c0-be0a-e64123899d45" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.14024983723958); (6.25 : 8.14024983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/ModuloCurso/ModuloCurso_Curso" />
+      <nodes>
+        <classShapeMoniker Id="fbccad62-3bc6-45ba-a57c-946ca26606d5" />
+        <classShapeMoniker Id="e2add2cd-172c-4a92-94c9-06fe7ccf7238" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 7.7612939453125); (1.75 : 11.2412019856771); (3.5 : 11.2412019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/Paises/Paises_AulasVital" />
+      <nodes>
+        <classShapeMoniker Id="d4833ffd-9ac7-4c4c-ae55-2eb7b02be35e" />
+        <classShapeMoniker Id="b1fdf349-776f-4f14-974b-162a7bf61e27" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.48437375 : 6.375); (1.48437375 : 2.41429768880208); (3.5 : 2.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBCursoDataContext/Paises/Paises_Ciudad" />
+      <nodes>
+        <classShapeMoniker Id="d4833ffd-9ac7-4c4c-ae55-2eb7b02be35e" />
+        <classShapeMoniker Id="27342b1b-510a-43ae-ad48-167fe5f601ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 6.375); (2.2812525 : 5.23159912109375); (3.5 : 5.23159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/Paises/Paises_Especialidad" />
+      <nodes>
+        <classShapeMoniker Id="d4833ffd-9ac7-4c4c-ae55-2eb7b02be35e" />
+        <classShapeMoniker Id="17d1f06e-6b7f-4e12-85e3-17b618c99672" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.38064697265625); (3.5 : 7.38064697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/Paises/Paises_ModuloCurso" />
+      <nodes>
+        <classShapeMoniker Id="d4833ffd-9ac7-4c4c-ae55-2eb7b02be35e" />
+        <classShapeMoniker Id="fbccad62-3bc6-45ba-a57c-946ca26606d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 14.65625); (6.265625 : 14.65625); (6.265625 : 9.85740397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/RecursoDidactico/RecursoDidactico_Curso" />
+      <nodes>
+        <classShapeMoniker Id="86cd75f6-460a-49c7-8474-886e87b51174" />
+        <classShapeMoniker Id="e2add2cd-172c-4a92-94c9-06fe7ccf7238" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.4142976888021); (3.5 : 15.4142976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBCursoDataContext/Proveedor/Proveedor_RecursoDidactico" />
+      <nodes>
+        <classShapeMoniker Id="07d3129d-2f25-443b-94a8-87e378f374d7" />
+        <classShapeMoniker Id="86cd75f6-460a-49c7-8474-886e87b51174" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a3ff8c20-258d-406b-a858-8e8062290fde" absoluteBounds="9.375, 7.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBCursoDataContext/V_CiudadAlumno" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93a00455-eb47-40c0-bb5d-7be5df5155fa" absoluteBounds="9.39, 8.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f238cbf0-a5cf-4a6c-a792-0aa1a4a1b340" absoluteBounds="6.375, 10.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBCursoDataContext/V_CiudadPais" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4a9845d-cb1a-4b9b-8b0b-008bf1b66b76" absoluteBounds="6.39, 11.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="796bee36-e2c1-4414-9a2b-e34c21d6f6d7" absoluteBounds="9.375, 10.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DBCursoDataContext/V_CursoCompleto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58c2167a-6783-4bab-86cc-03407419c09f" absoluteBounds="9.39, 11.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99ec62e7-38cd-4861-b65f-eabcf72a2f93" absoluteBounds="12.375, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/DBCursoDataContext/V_EspecialidadPaises" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61714f51-d5bc-4a2e-87e4-f0a526edb9c4" absoluteBounds="12.39, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7201bdfa-b30d-4ca8-b35c-c6e26f9fde6f" absoluteBounds="12.375, 7.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBCursoDataContext/V_InscripcionAlumno" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5cebfd9-891b-4636-91ef-a1e76113f7c9" absoluteBounds="12.39, 8.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b917713a-eca9-4341-aae0-93ffaf0e3f52" absoluteBounds="12.375, 10.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/DBCursoDataContext/V_InscripcionCurso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67292be9-9c96-4610-a6a7-f397feb3a954" absoluteBounds="12.39, 11.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27d67f4a-fdac-4845-85a7-f22a98805673" absoluteBounds="6.375, 14.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBCursoDataContext/V_ModuloPais" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0442f18-99cb-4f07-a2d1-557b367d8a08" absoluteBounds="6.39, 15.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ba7669b4-9387-481a-9283-97bc72776dba" absoluteBounds="9.375, 14.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBCursoDataContext/V_RecursoProveedor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04dd4b84-2588-413b-a987-36cb81c7b306" absoluteBounds="9.39, 15.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8fdab7c-e17e-418e-81ae-a8d6efca97a9" absoluteBounds="8.375, 4.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DBCursoDataContext/Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="674059d0-5d7c-45fe-acd2-51c1d391cea7" absoluteBounds="8.39, 5.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3a39fb7b-3429-4a51-9087-e66ad52884b6" absoluteBounds="18, 2.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBCursoDataContext/CertificadoCurso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44b225ab-4ee9-4b33-ba37-8eb9addd1489" absoluteBounds="18.015, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cbfb9b87-41e1-4b6a-97a0-b1936b7387bf" absoluteBounds="16.75, 7, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DBCursoDataContext/V_InscripcionCursoPLUS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb38b1a4-3b8a-4079-902a-4c6f4b3fb085" absoluteBounds="16.765, 7.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8bccf315-63d9-4b6e-8732-219fe89b81f8" absoluteBounds="15.125, 3.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DBCursoDataContext/NotaFinalCurso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48aa8d0a-a83f-4911-94ff-90abf4092fbe" absoluteBounds="15.14, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

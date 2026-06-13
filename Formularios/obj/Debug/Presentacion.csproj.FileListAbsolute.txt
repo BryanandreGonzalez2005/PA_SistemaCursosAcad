@@ -1,0 +1,16 @@
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\bin\Debug\Formularios.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\bin\Debug\Formularios.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\bin\Debug\Entidades.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\bin\Debug\Logica.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\bin\Debug\PA_SistemaCursosAcad.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\bin\Debug\Entidades.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\bin\Debug\Logica.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\bin\Debug\PA_SistemaCursosAcad.pdb
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\bin\Debug\PA_SistemaCursosAcad.dll.config
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\obj\Debug\Formularios.Facturacion.adminEspecialidad.resources
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\obj\Debug\Presenta.BC77CD05.Up2Date
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\obj\Debug\Formularios.dll
+C:\Users\LENOVO\source\repos\PROGRAMAS 4A\PA_SistemaCursosAcad\Formularios\obj\Debug\Formularios.pdb

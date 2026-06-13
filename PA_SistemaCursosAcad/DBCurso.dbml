@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SistemaCursos" Class="DBCursoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-0PQR165;Initial Catalog=SistemaCursos;Integrated Security=True" SettingsObjectName="PA_SistemaCursosAcad.Properties.Settings" SettingsPropertyName="SistemaCursosConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Alumno" Member="Alumno">
+    <Type Name="Alumno">
+      <Column Name="idAlumno" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idCiudad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Alumno_Inscripcion" Member="Inscripcion" ThisKey="idAlumno" OtherKey="idAlumno" Type="Inscripcion" />
+      <Association Name="Ciudad_Alumno" Member="Ciudad" ThisKey="idCiudad" OtherKey="idCiudad" Type="Ciudad" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AulasVital" Member="AulasVital">
+    <Type Name="AulasVital">
+      <Column Name="idAulaVirtual" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioUso" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DuracionDisponibilidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="AulasVital_Curso" Member="Curso" ThisKey="idAulaVirtual" OtherKey="idAulaVirtual" Type="Curso" />
+      <Association Name="Paises_AulasVital" Member="Paises" ThisKey="idPais" OtherKey="idPais" Type="Paises" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ciudad" Member="Ciudad">
+    <Type Name="Ciudad">
+      <Column Name="idCiudad" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Ciudad_Alumno" Member="Alumno" ThisKey="idCiudad" OtherKey="idCiudad" Type="Alumno" />
+      <Association Name="Paises_Ciudad" Member="Paises" ThisKey="idPais" OtherKey="idPais" Type="Paises" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Curso" Member="Curso">
+    <Type Name="Curso">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Descuento" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Requisitos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idRecurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idEspecialidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idAulaVirtual" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idModuloCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Curso_Inscripcion_Curso" Member="Inscripcion_Curso" ThisKey="idCurso" OtherKey="idCurso" Type="Inscripcion_Curso" />
+      <Association Name="AulasVital_Curso" Member="AulasVital" ThisKey="idAulaVirtual" OtherKey="idAulaVirtual" Type="AulasVital" IsForeignKey="true" />
+      <Association Name="Especialidad_Curso" Member="Especialidad" ThisKey="idEspecialidad" OtherKey="idEspecialidad" Type="Especialidad" IsForeignKey="true" />
+      <Association Name="ModuloCurso_Curso" Member="ModuloCurso" ThisKey="idModuloCurso" OtherKey="idModuloCurso" Type="ModuloCurso" IsForeignKey="true" />
+      <Association Name="RecursoDidactico_Curso" Member="RecursoDidactico" ThisKey="idRecurso" OtherKey="idRecurso" Type="RecursoDidactico" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Especialidad" Member="Especialidad">
+    <Type Name="Especialidad">
+      <Column Name="idEspecialidad" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Costo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Especialidad_Curso" Member="Curso" ThisKey="idEspecialidad" OtherKey="idEspecialidad" Type="Curso" />
+      <Association Name="Paises_Especialidad" Member="Paises" ThisKey="idPais" OtherKey="idPais" Type="Paises" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Inscripcion" Member="Inscripcion">
+    <Type Name="Inscripcion">
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FechaInscripcion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CantHorasTeoricas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatHorasPracticas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idAlumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Inscripcion_Inscripcion_Curso" Member="Inscripcion_Curso" ThisKey="idInscripcion" OtherKey="idInscripcion" Type="Inscripcion_Curso" />
+      <Association Name="Alumno_Inscripcion" Member="Alumno" ThisKey="idAlumno" OtherKey="idAlumno" Type="Alumno" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Inscripcion-Curso]" Member="Inscripcion_Curso">
+    <Type Name="Inscripcion_Curso">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaPago" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MetodoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Iva" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPagar" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Curso_Inscripcion_Curso" Member="Curso" ThisKey="idCurso" OtherKey="idCurso" Type="Curso" IsForeignKey="true" />
+      <Association Name="Inscripcion_Inscripcion_Curso" Member="Inscripcion" ThisKey="idInscripcion" OtherKey="idInscripcion" Type="Inscripcion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ModuloCurso" Member="ModuloCurso">
+    <Type Name="ModuloCurso">
+      <Column Name="idModuloCurso" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Duracion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoModulo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ModuloCurso_Curso" Member="Curso" ThisKey="idModuloCurso" OtherKey="idModuloCurso" Type="Curso" />
+      <Association Name="Paises_ModuloCurso" Member="Paises" ThisKey="idPais" OtherKey="idPais" Type="Paises" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Paises" Member="Paises">
+    <Type Name="Paises">
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Paises_AulasVital" Member="AulasVital" ThisKey="idPais" OtherKey="idPais" Type="AulasVital" />
+      <Association Name="Paises_Ciudad" Member="Ciudad" ThisKey="idPais" OtherKey="idPais" Type="Ciudad" />
+      <Association Name="Paises_Especialidad" Member="Especialidad" ThisKey="idPais" OtherKey="idPais" Type="Especialidad" />
+      <Association Name="Paises_ModuloCurso" Member="ModuloCurso" ThisKey="idPais" OtherKey="idPais" Type="ModuloCurso" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Proveedor" Member="Proveedor">
+    <Type Name="Proveedor">
+      <Column Name="idProveedor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ruc" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Proveedor_RecursoDidactico" Member="RecursoDidactico" ThisKey="idProveedor" OtherKey="idProveedor" Type="RecursoDidactico" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecursoDidactico" Member="RecursoDidactico">
+    <Type Name="RecursoDidactico">
+      <Column Name="idRecurso" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idProveedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoUnitario" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="RecursoDidactico_Curso" Member="Curso" ThisKey="idRecurso" OtherKey="idRecurso" Type="Curso" />
+      <Association Name="Proveedor_RecursoDidactico" Member="Proveedor" ThisKey="idProveedor" OtherKey="idProveedor" Type="Proveedor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_CiudadAlumno" Member="V_CiudadAlumno">
+    <Type Name="V_CiudadAlumno">
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idAlumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_CiudadPais" Member="V_CiudadPais">
+    <Type Name="V_CiudadPais">
+      <Column Name="idCiudad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_CursoCompleto" Member="V_CursoCompleto">
+    <Type Name="V_CursoCompleto">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Descuento" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Requisitos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_EspecialidadPaises" Member="V_EspecialidadPaises">
+    <Type Name="V_EspecialidadPaises">
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idEspecialidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Costo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_InscripcionAlumno" Member="V_InscripcionAlumno">
+    <Type Name="V_InscripcionAlumno">
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInscripcion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CedulaAlumno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CantHorasTeoricas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatHorasPracticas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_InscripcionCurso" Member="V_InscripcionCurso">
+    <Type Name="V_InscripcionCurso">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaPago" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MetodoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Iva" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPagar" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_ModuloPais" Member="V_ModuloPais">
+    <Type Name="V_ModuloPais">
+      <Column Name="idModuloCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Duracion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoModulo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_RecursoProveedor" Member="V_RecursoProveedor">
+    <Type Name="V_RecursoProveedor">
+      <Column Name="idRecurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Proveedor" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoUnitario" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuario" Member="Usuario">
+    <Type Name="Usuario">
+      <Column Name="NombreUsuario" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CertificadoCurso" Member="CertificadoCurso">
+    <Type Name="CertificadoCurso">
+      <Column Name="idCertificado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idNotaCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEmisicion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoVerificacion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="URLDocumento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_InscripcionCursoPLUS" Member="V_InscripcionCursoPLUS">
+    <Type Name="V_InscripcionCursoPLUS">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaPago" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MetodoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Iva" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPagar" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="idAlumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NotaFinalCurso" Member="NotaFinalCurso">
+    <Type Name="NotaFinalCurso">
+      <Column Name="idNotaFinal" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idAlumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NotaFinal" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Observacion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CP_CalcularSubtotalCurso" Method="CP_CalcularSubtotalCurso">
+    <Parameter Name="idAulaV" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idEspecialidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idRecurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idModulo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CP_CalcularSubtotalCursoResult">
+      <Column Name="Subtotal" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Descuento" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarAlumnoFiltro" Method="CP_ListarAlumnoFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="CP_ListarAlumnoFiltroResult">
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idAlumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarAulaInstalacionesFiltro" Method="CP_ListarAulaInstalacionesFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="CP_ListarAulaInstalacionesFiltroResult">
+      <Column Name="idAulaVirtual" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioUso" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DuracionDisponibilidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Expr1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarCiudadPaisFiltro" Method="CP_ListarCiudadPaisFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="CP_ListarCiudadPaisFiltroResult">
+      <Column Name="idCiudad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarCursoFiltro" Method="CP_ListarCursoFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="CP_ListarCursoFiltroResult">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Descuento" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Requisitos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarEspecialidadFiltro" Method="CP_ListarEspecialidadFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="CP_ListarEspecialidadFiltroResult">
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idEspecialidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Costo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarInscripcionAlumnoFiltro" Method="CP_ListarInscripcionAlumnoFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="CP_ListarInscripcionAlumnoFiltroResult">
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInscripcion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CedulaAlumno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CantHorasTeoricas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatHorasPracticas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarInscripcionCursoFiltro" Method="CP_ListarInscripcionCursoFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="CP_ListarInscripcionCursoFiltroResult">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaPago" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MetodoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Iva" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPagar" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarModuloFiltro" Method="CP_ListarModuloFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="CP_ListarModuloFiltroResult">
+      <Column Name="idModuloCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Duracion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoModulo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarPaisFiltro" Method="CP_ListarPaisFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="CP_ListarPaisFiltroResult">
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarProveedorFiltro" Method="CP_ListarProveedorFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="CP_ListarProveedorFiltroResult">
+      <Column Name="idProveedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ruc" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarRecursoProveedorFiltro" Method="CP_ListarRecursoProveedorFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="CP_ListarRecursoProveedorFiltroResult">
+      <Column Name="idRecurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Proveedor" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoUnitario" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPAactualizarAlumno" Method="CPAactualizarAlumno">
+    <Parameter Name="idAlumno" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idCiudad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPAactualizarAulaVirtual" Method="CPAactualizarAulaVirtual">
+    <Parameter Name="idAula" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Tipo" Parameter="tipo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Categoria" Parameter="categoria" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PrecioUso" Parameter="precioUso" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="DuracionDisp" Parameter="duracionDisp" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(90)" />
+    <Parameter Name="Subtotal" Parameter="subtotal" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="idPais" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPAactualizarCiudad" Method="CPAactualizarCiudad">
+    <Parameter Name="idCiudad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPais" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPAactualizarCurso" Method="CPAactualizarCurso">
+    <Parameter Name="idCurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreCurso" Parameter="nombreCurso" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="subtotal" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="descuento" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="requisitos" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idRecurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idEspecialidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idAulaVirtual" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idModuloCurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPAactualizarInscripcion" Method="CPAactualizarInscripcion">
+    <Parameter Name="idInscripcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fechaInscripcion" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="fechaFin" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="cantHorasTeoricas" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cantHorasPracticas" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idAlumno" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPAactualizarInscripcionCurso" Method="CPAactualizarInscripcionCurso">
+    <Parameter Name="idCurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idInscripcionActual" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idInscripcionNueva" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fechaPago" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="subTotal" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="metodoPago" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="iva" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="TotalPagar" Parameter="totalPagar" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPAactualizarModulo" Method="CPAactualizarModulo">
+    <Parameter Name="idModulo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreModulo" Parameter="nombreModulo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TipoModulo" Parameter="tipoModulo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Duracion" Parameter="duracion" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="costoModulo" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="idPais" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPAactualizarPais" Method="CPAactualizarPais">
+    <Parameter Name="idpais" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPAactualizarProveedor" Method="CPAactualizarProveedor">
+    <Parameter Name="idProveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ruc" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tipo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="direccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="telefono" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPAactualizarRecursoDidactico" Method="CPAactualizarRecursoDidactico">
+    <Parameter Name="idRecurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idProveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tipo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="costoUnitario" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPActualizarEspecialidad" Method="CPActualizarEspecialidad">
+    <Parameter Name="idEspecialidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombreEspecialidad" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idPais" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tipoEspecialidad" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="costo" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarAlumno" Method="CPEliminarAlumno">
+    <Parameter Name="IdAlumno" Parameter="idAlumno" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarAulaVirtual" Method="CPEliminarAulaVirtual">
+    <Parameter Name="IdAula" Parameter="idAula" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarCiudad" Method="CPEliminarCiudad">
+    <Parameter Name="IdCiudad" Parameter="idCiudad" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarCurso" Method="CPEliminarCurso">
+    <Parameter Name="IdCurso" Parameter="idCurso" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarEspecialidad" Method="CPEliminarEspecialidad">
+    <Parameter Name="IdEspecialidad" Parameter="idEspecialidad" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarInscripcion" Method="CPEliminarInscripcion">
+    <Parameter Name="IdInscripcion" Parameter="idInscripcion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarInscripcionCurso" Method="CPEliminarInscripcionCurso">
+    <Parameter Name="IdCurso" Parameter="idCurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdInscripcion" Parameter="idInscripcion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarModuloCurso" Method="CPEliminarModuloCurso">
+    <Parameter Name="IdModulo" Parameter="idModulo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarPais" Method="CPEliminarPais">
+    <Parameter Name="IdPais" Parameter="idPais" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarProveedor" Method="CPEliminarProveedor">
+    <Parameter Name="IdProveedor" Parameter="idProveedor" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarRecursoDidactico" Method="CPEliminarRecursoDidactico">
+    <Parameter Name="IdRecurso" Parameter="idRecurso" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarAlumno" Method="CPInsertarAlumno">
+    <Parameter Name="idAlumno" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idCiudad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarAulaVirtual" Method="CPInsertarAulaVirtual">
+    <Parameter Name="idAulaVirtual" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Tipo" Parameter="tipo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Categoria" Parameter="categoria" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PrecioUso" Parameter="precioUso" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="DuracionDisponibilidad" Parameter="duracionDisponibilidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(90)" />
+    <Parameter Name="Subtotal" Parameter="subtotal" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="idPais" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarCiudad" Method="CPInsertarCiudad">
+    <Parameter Name="idCiudad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPais" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarCurso" Method="CPInsertarCurso">
+    <Parameter Name="idCurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreCurso" Parameter="nombreCurso" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="subtotal" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="descuento" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="requisitos" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idRecurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idEspecialidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idAulaVirtual" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idModuloCurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarEspecialidad" Method="CPInsertarEspecialidad">
+    <Parameter Name="idEspecialidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombreEspecialidad" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idPais" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tipoEspecialidad" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="costo" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarInscripcion" Method="CPInsertarInscripcion">
+    <Parameter Name="idInscripcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fechaInscripcion" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="fechaFin" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="cantHorasTeoricas" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cantHorasPracticas" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idAlumno" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarInscripcionCurso" Method="CPInsertarInscripcionCurso">
+    <Parameter Name="idCurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idInscripcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fechaPago" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="subTotal" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="metodoPago" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="iva" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="TotalPagar" Parameter="totalPagar" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarModuloCurso" Method="CPInsertarModuloCurso">
+    <Parameter Name="idModulo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nomModulo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tip" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="desc" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dur" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="costo" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="idPais" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarPais" Method="CPInsertarPais">
+    <Parameter Name="idPais" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarProveedor" Method="CPInsertarProveedor">
+    <Parameter Name="idProveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ruc" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tipo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="direccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="telefono" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarRecursoDidactico" Method="CPInsertarRecursoDidactico">
+    <Parameter Name="idRecurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idProveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tipo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="costoUnitario" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPListarAlumno" Method="CPListarAlumno">
+    <ElementType Name="CPListarAlumnoResult">
+      <Column Name="idAlumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idCiudad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarAulaVirtual" Method="CPListarAulaVirtual">
+    <ElementType Name="CPListarAulaVirtualResult">
+      <Column Name="idAulaVirtual" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioUso" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DuracionDisponibilidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarCiudad" Method="CPListarCiudad">
+    <ElementType Name="CPListarCiudadResult">
+      <Column Name="idCiudad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarCursos" Method="CPListarCursos">
+    <ElementType Name="CPListarCursosResult">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Descuento" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Requisitos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idRecurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idEspecialidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idAulaVirtual" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idModuloCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarEspecialidad" Method="CPListarEspecialidad">
+    <ElementType Name="CPListarEspecialidadResult">
+      <Column Name="idEspecialidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Costo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarInscripcion" Method="CPListarInscripcion">
+    <ElementType Name="CPListarInscripcionResult">
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInscripcion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CantHorasTeoricas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatHorasPracticas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idAlumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarInscripcionCurso" Method="CPListarInscripcionCurso">
+    <ElementType Name="CPListarInscripcionCursoResult">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaPago" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MetodoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Iva" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPagar" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarModuloCurso" Method="CPListarModuloCurso">
+    <ElementType Name="CPListarModuloCursoResult">
+      <Column Name="idModuloCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Duracion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoModulo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarPaises" Method="CPListarPaises">
+    <ElementType Name="CPListarPaisesResult">
+      <Column Name="idPais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarProveedor" Method="CPListarProveedor">
+    <ElementType Name="CPListarProveedorResult">
+      <Column Name="idProveedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ruc" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarRecursoDidactico" Method="CPListarRecursoDidactico">
+    <ElementType Name="CPListarRecursoDidacticoResult">
+      <Column Name="idRecurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idProveedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoUnitario" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPV_ListarAlumno" Method="CPV_ListarAlumno">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CPV_ListarAlumnoResult">
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idAlumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPV_ListarAulaVirtual" Method="CPV_ListarAulaVirtual">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CPV_ListarAulaVirtualResult">
+      <Column Name="idAulaVirtual" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioUso" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DuracionDisponibilidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Expr1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPV_ListarCiudad" Method="CPV_ListarCiudad">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CPV_ListarCiudadResult">
+      <Column Name="idCiudad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPV_ListarCurso" Method="CPV_ListarCurso">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CPV_ListarCursoResult">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Descuento" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Requisitos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPV_ListarEspecialidad" Method="CPV_ListarEspecialidad">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CPV_ListarEspecialidadResult">
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idEspecialidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoEspecialidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Costo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPV_ListarInscripcion" Method="CPV_ListarInscripcion">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CPV_ListarInscripcionResult">
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInscripcion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CedulaAlumno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CantHorasTeoricas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatHorasPracticas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPV_ListarInscripcionCurso" Method="CPV_ListarInscripcionCurso">
+    <Parameter Name="IdCurso" Parameter="idCurso" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CPV_ListarInscripcionCursoResult">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaPago" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MetodoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Iva" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPagar" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPV_ListarModuloCurso" Method="CPV_ListarModuloCurso">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CPV_ListarModuloCursoResult">
+      <Column Name="idModuloCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoModulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Duracion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoModulo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPV_ListarRecursoDidactico" Method="CPV_ListarRecursoDidactico">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CPV_ListarRecursoDidacticoResult">
+      <Column Name="idRecurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Proveedor" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoUnitario" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CRP_InscripcionCurso" Method="CRP_InscripcionCurso">
+    <Parameter Name="IdCurso" Parameter="idCurso" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CRP_InscripcionCursoResult">
+      <Column Name="idCurso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idInscripcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaPago" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MetodoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Iva" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPagar" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_InsertarUsuario" Method="CP_InsertarUsuario">
+    <Parameter Name="NombreUsuario" Parameter="nombreUsuario" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Contraseña" Parameter="contraseña" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CP_VerificarUsuario" Method="CP_VerificarUsuario">
+    <Parameter Name="NombreUsuario" Parameter="nombreUsuario" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Contraseña" Parameter="contraseña" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="CP_VerificarUsuarioResult">
+      <Column Name="Resultado" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ObtenerCertificadoPorAlumno" Method="CP_ObtenerCertificadoPorAlumno">
+    <Parameter Name="idAlumno" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CP_ObtenerCertificadoPorAlumnoResult">
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCurso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NotaFinal" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEmisicion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoVerificacion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="URLDocumento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_RegistrarNotaFinal" Method="CP_RegistrarNotaFinal">
+    <Parameter Name="idAlumno" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idCurso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NotaFinal" Parameter="notaFinal" Type="System.Decimal" DbType="Decimal(5,2)" />
+  </Function>
+</Database>
